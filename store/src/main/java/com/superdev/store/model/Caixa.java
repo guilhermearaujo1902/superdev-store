@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -13,21 +14,17 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Produto {
+public class Caixa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private String nome;
-    private Double preco;
-    private int quantidade;
+    private Boolean status;
+    private Date dataFechamento;
+    private Double valorTotal;
 
-    @ManyToOne
-    @JoinColumn(name = "categoria_id")
-    private Categoria categoria;
-
-    @ManyToMany(mappedBy = "produtosPedido")
-    private List<Pedido> pedidosProduto;
+    @OneToMany(mappedBy = "caixa")
+    private List<Pedido> pedidos;
 
 }
