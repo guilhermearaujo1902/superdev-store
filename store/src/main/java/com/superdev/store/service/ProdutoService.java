@@ -3,9 +3,11 @@ package com.superdev.store.service;
 import com.superdev.store.model.Produto;
 import com.superdev.store.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProdutoService {
 
     @Autowired
