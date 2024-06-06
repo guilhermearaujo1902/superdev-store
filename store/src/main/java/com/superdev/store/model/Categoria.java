@@ -29,7 +29,7 @@ public class Categoria {
     private boolean status;
 
     @Nullable
-    private Integer qualidade;
+    private String qualidade;
 
     @JsonIgnore
     @OneToMany(mappedBy = "categoria")
