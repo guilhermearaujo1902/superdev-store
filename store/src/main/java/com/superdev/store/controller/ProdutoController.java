@@ -15,7 +15,7 @@ public class ProdutoController {
     @Autowired
     private ProdutoService produtoService;
     
-    @GetMapping
+    @GetMapping("/")
     public List<Produto> buscarTodos() {
         return produtoService.findAll();
     }
@@ -27,6 +27,11 @@ public class ProdutoController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(produtoEncontrado);
+    }
+
+    @GetMapping("/nome/{nome}")
+    public List<Produto> buscarProdutoPorNome(@PathVariable String nome){
+        return produtoService.buscarProdutoPorNome(nome);
     }
 
     @PostMapping

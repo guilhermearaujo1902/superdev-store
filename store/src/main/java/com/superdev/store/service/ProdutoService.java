@@ -59,4 +59,8 @@ public class ProdutoService {
         return true;
     }
 
+    public List<Produto> buscarProdutoPorNome(String nome) {
+        return produtoRepository.buscarProdutoPorNome(nome);
+    }
+
 }
