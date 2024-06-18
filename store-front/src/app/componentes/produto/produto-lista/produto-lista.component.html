@@ -1,0 +1,56 @@
+<div class="col-12 mb-3 titulo">
+    <p class="m-0">Módulo de Produto</p>
+</div>
+
+<div class="col-12 p-4 pb-0">
+    <div class="m-0 botoes">
+        <button routerLink="produto/novo" >+ Novo</button>
+    </div>
+</div>
+
+<div class="col-12 p-4">
+    <table class="table table-hover table-light">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let produto of produtos">
+                <td>{{ produto.id }}</td>
+                <td>{{ produto.nome }}</td>
+                <td>{{ produto.preco }}</td>
+                <td>{{ produto.quantidade }}</td>
+                <td>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Opções
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" [routerLink]="['/produto', produto.id]">
+                                    Ver Detalhe
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" [routerLink]="['/produto/editar', produto.id]">
+                                    Editar
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" (click)="delete(produto.id)">
+                                    Excluir
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
