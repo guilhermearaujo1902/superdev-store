@@ -1,1 +1,51 @@
-<p>produto-form works!</p>
+<div class="col-12 mb-3 titulo">
+    <p class="m-0">Módulo de Produto</p>
+</div>
+
+<div class="col-12 p-4">
+    <form (ngSubmit)="salvar()">
+        <div class="form-group row mb-3" *ngIf="this.produto.id != 0">
+            <label for="id" class="col-12 col-form-label">ID</label>
+            <div class="col-12">
+                <input id="id" name="id" type="text" class="form-control" readonly="true"
+                    [(ngModel)]="this.produto.id">
+            </div>
+        </div>
+        <div class="form-group row mb-3">
+            <label for="nome" class="col-12 col-form-label">Nome</label>
+            <div class="col-12">
+                <input id="nome" name="nome" placeholder="Ex: Notebook" type="text" class="form-control"
+                    [(ngModel)]="this.produto.nome">
+            </div>
+        </div>
+        <div class="form-group row mb-4">
+            <div class="col-6">
+                <label for="preco" class="col-12 col-form-label">Preço</label>
+                <div class="col-12">
+                    <input id="preco" name="preco" placeholder="Ex: 500,00" type="number" class="form-control"
+                        [(ngModel)]="this.produto.preco">
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="quantidade" class="col-12 col-form-label">Quantidade</label>
+                <div class="col-12">
+                    <input id="quantidade" name="quantidade" placeholder="0" type="number" class="form-control"
+                        [(ngModel)]="this.produto.quantidade">
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 d-flex justify-content-center">
+                <button name="submit" type="reset" class="btn btn-primary mx-2">
+                    Limpar
+                </button>
+                <button name="submit" class="btn btn-primary mx-2" (click)="cancelar()">
+                    Cancelar
+                </button>
+                <button name="submit" type="submit" class="btn btn-primary mx-2">
+                    {{ this.isEdicao ? 'Salvar Alterações' : 'Adicionar Produto' }}
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

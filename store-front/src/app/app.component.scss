@@ -20,12 +20,13 @@
         flex-direction: column;
         align-items: end;
         font-weight: 500;
-        div {
+        button {
             background-color: #FFF;
             padding: 16px;
             margin-bottom: 10px;
             width: 80%;
             border-radius: 5px 0 0 5px;
+            border: none;
             &:hover{
                 background-color: #6EB536;
                 cursor: pointer;
@@ -38,33 +39,6 @@
 .conteudo{
     background-color: #5C5B5B;
     padding: 16px;
-    section{
-        width: 100%;
-    }
-    div{
-        background-color: #7F7E7E;
-    }
-    .titulo{
-        border-left: #6EB536 solid 20px;
-        padding: 28px 16px;
-        color: #FFF;
-        font-weight: 600;
-        font-size: 24px;
-    }
-    .botoes{
-        display: flex;
-        justify-content: end;
-        button{
-            border: none;
-            border-radius: 5px;
-            background-color: #6EB536;
-            color: #FFF;
-            padding: 10px 20px;
-            &:hover{
-                background-color: #60a32d;
-            }
-        }
-    }   
 }
 
 main{
