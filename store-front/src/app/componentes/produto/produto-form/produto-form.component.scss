@@ -11,3 +11,12 @@ div{
 label{
     color: #FFF;
 }
+.btn-secondary,
+.btn-secondary:active{
+    background-color: #7536B5;
+}
+.btn-secondary{
+    &:hover{
+        background-color: #532185;
+    }
+}

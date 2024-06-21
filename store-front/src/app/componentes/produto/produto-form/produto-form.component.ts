@@ -14,7 +14,13 @@ export class ProdutoFormComponent {
     id: 0,
     nome: '',
     preco: 0,
-    quantidade: 0
+    quantidade: 0,
+    categoria: {
+      id: 0,
+      nome: '',
+      statua: false,
+      qualidade: ''
+    }
   };
 
   isEdicao: boolean = false;
@@ -41,6 +47,7 @@ export class ProdutoFormComponent {
   }
 
   salvar(): void {
+    this.produto.categoria.id = 1;
     if (this.isEdicao) {
       this.produtoService.update(this.produto).subscribe(() => {
         this.router.navigate(['/produtos']);

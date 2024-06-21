@@ -29,7 +29,4 @@ public class Produto {
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
-    @ManyToMany(mappedBy = "produtosPedido")
-    private List<Pedido> pedidosProduto;
-
 }
