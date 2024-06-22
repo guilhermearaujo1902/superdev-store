@@ -18,7 +18,7 @@ export class ProdutoFormComponent {
     categoria: {
       id: 0,
       nome: '',
-      statua: false,
+      status: false,
       qualidade: ''
     }
   };

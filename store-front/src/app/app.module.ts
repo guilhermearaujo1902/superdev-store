@@ -9,7 +9,9 @@ import { AppComponent } from './app.component';
 import { ProdutoListaComponent } from './componentes/produto/produto-lista/produto-lista.component';
 import { ProdutoDetalheComponent } from './componentes/produto/produto-detalhe/produto-detalhe.component';
 import { ProdutoFormComponent } from './componentes/produto/produto-form/produto-form.component';
-import { CategoriaListComponent } from './componentes/categoria/categoria-list/categoria-list.component';
+import { CategoriaListaComponent } from './componentes/categoria/categoria-lista/categoria-lista.component';
+import { CategoriaFormComponent } from './componentes/categoria/categoria-form/categoria-form.component';
+import { CategoriaDetalheComponent } from './componentes/categoria/categoria-detalhe/categoria-detalhe.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CategoriaListComponent } from './componentes/categoria/categoria-list/c
     ProdutoListaComponent,
     ProdutoDetalheComponent,
     ProdutoFormComponent,
-    CategoriaListComponent
+    CategoriaListaComponent,
+    CategoriaFormComponent,
+    CategoriaDetalheComponent
   ],
   imports: [
     BrowserModule,
