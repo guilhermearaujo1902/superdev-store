@@ -15,6 +15,9 @@ import { CategoriaDetalheComponent } from './componentes/categoria/categoria-det
 import { ClienteListaComponent } from './componentes/cliente/cliente-lista/cliente-lista.component';
 import { ClienteFormComponent } from './componentes/cliente/cliente-form/cliente-form.component';
 import { ClienteDetalheComponent } from './componentes/cliente/cliente-detalhe/cliente-detalhe.component';
+import { CaixaListaComponent } from './componentes/caixa/caixa-lista/caixa-lista.component';
+import { CaixaDetalheComponent } from './componentes/caixa/caixa-detalhe/caixa-detalhe.component';
+import { CaixaFormComponent } from './componentes/caixa/caixa-form/caixa-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { ClienteDetalheComponent } from './componentes/cliente/cliente-detalhe/c
     CategoriaDetalheComponent,
     ClienteListaComponent,
     ClienteFormComponent,
-    ClienteDetalheComponent
+    ClienteDetalheComponent,
+    CaixaListaComponent,
+    CaixaDetalheComponent,
+    CaixaFormComponent
   ],
   imports: [
     BrowserModule,

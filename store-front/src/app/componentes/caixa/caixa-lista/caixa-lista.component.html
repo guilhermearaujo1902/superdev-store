@@ -1,0 +1,57 @@
+<section>
+    <div class="col-12 mb-3 titulo">
+        <p class="m-0">Módulo de Caixa</p>
+    </div>
+    
+    <div class="col-12 p-4 pb-0">
+        <div class="m-0 botoes">
+            <button routerLink="/caixa/novo" >+ Novo</button>
+        </div>
+    </div>
+    
+    <div class="col-12 p-4 box">
+        <table class="table table-hover table-light">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Status</th>
+                    <th>Fechamento</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let caixa of caixas">
+                    <td>{{ caixa.id }}</td>
+                    <td>{{ caixa.status }}</td>
+                    <td>{{ caixa.dataFechamento }}</td>
+                    <td>{{ caixa.valorTotal }}</td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Opções
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" [routerLink]="['/caixa', caixa.id]">
+                                        Ver Detalhe
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" [routerLink]="['/caixa/editar', caixa.id]">
+                                        Editar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" (click)="this.delete(caixa.id)">
+                                        Excluir
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
